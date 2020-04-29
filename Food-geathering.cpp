@@ -1,3 +1,5 @@
+
+
 #include<bits/stdc++.h>
 #define input        freopen("input.txt","r",stdin);
 #define output       freopen("output.txt","w",stdout)
@@ -21,22 +23,7 @@ void take_graph(){
     graph[10]="#....C.....#";
     graph[11]="############";
 
-//    for(int i=0;i<=11;i++){
-//        for(int j=0;j<=11;j++){
-//            if(i==0 || j==0 || i==11 || j==11){
-//                graph[i][j]='#';
-//            }
-//            else {
-//                char ch;
-//                cin>>ch;
-//                graph[i][j]=ch;
-//
-//                if(ch=='X')initial_position=make_pair(i,j);
-//            }
-//        }
-//    }
 }
-
 string sub="ABCD";
 void goposition(char ch){
     int i=initial_position.first;
@@ -57,8 +44,6 @@ void goposition(char ch){
         else{
             cout<<"You can not move there"<<endl;
         }
-
-
     }
     if(ch=='a'){
         if(graph[i][j-1]=='.'){
@@ -76,8 +61,6 @@ void goposition(char ch){
         else{
             cout<<"You can not move there"<<endl;
         }
-
-
     }if(ch=='s'){
         if(graph[i+1][j]=='.'){
             graph[i][j]='.';
@@ -106,39 +89,30 @@ void goposition(char ch){
             graph[i][j+1]='X';
             sub.erase(sub.begin());
             initial_position=make_pair(i,j+1);
-
         }
         else{
             cout<<"You can not move there"<<endl;
         }
-
-
     }
-
 }
-
-
 void print_grid(){
     for(int i=0;i<=11;i++){
         for(int j=0;j<=11;j++)cout<<graph[i][j];
         cout<<endl;
     }
 }
-
 int main(){
-//    input;
-
     printf("\t\tFood geathering\n");
     printf("\t   Geather food for winter :D\n");
     printf("#################################################");
-    printf("\n\n\tw : up\n\ta : right\n\ts : down\n\td : left\n\n");
+    printf("\n\n\tYour position is 'x' and you have to eate A,B,C,D");
+    printf("\n\n\t\tw : up\n\t\ta : right\n\t\ts : down\n\t\td : left\n\n");
     printf("#################################################\n");
     printf("\n\n\t   Press Enter to continue\n\n\n");
     getchar();
     system("clear");
     take_graph();
     print_grid();
-
     cout<<endl;
     int  n=0;
     while(1){
@@ -153,8 +127,6 @@ int main(){
         if(sub.size()==0){
             break;
         }
-
     }
-
-    cout<<"You did it "<<n<<" moves"<<endl;
+    cout<<"You did it in"<<n<<" moves"<<endl;
 }
