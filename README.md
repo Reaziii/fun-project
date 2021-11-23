@@ -1,1 +1,1 @@
-These project are made only for my fun purpose.
+### Fun projects ¯\_(ツ)_/¯ 
